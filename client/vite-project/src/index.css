@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .gallery-item + .gallery-item {
+  margin-left: 1.5em;
+} */
+
+.lg-backdrop {
+  background-color: #fff;
+}
+
+.lg-backdrop.in {
+  opacity: 0.6;
+}
+
+.lg-thumb-outer {
+  background-color: #fff !important;
+}
+
+.lg-icon {
+  background-color: #737373;
+  color: #fff;
+  font-size: 35px;
+  border-radius: 50%;
+}
+
+/* .lg-prev {
+  left: 250px;
+}
+
+.lg-next {
+  right: 250px;
+} */
+
+.gallery-item {
+  width: 100%;
+}
+
+.lg-react-element {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5em;
+}
+
+.lg-outer .lg-content {
+  bottom: 44px !important;
+}
+
+::-webkit-scrollbar {
+  background: #a1a1a1;
+  width: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5b5b5b;
+  border-radius: 10px;
+}
+
+#mobile-search {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .lg-react-element {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .lg-react-element {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .lg-react-element {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #mobile-search {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 570px) {
+  .lg-react-element {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+}
+
+.lg-toolbar .lg-icon,
+.lg-counter,
+.lg-counter:hover,
+.lg-toolbar .lg-icon:hover {
+  color: #000;
+}
